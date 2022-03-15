@@ -1,0 +1,13 @@
+## ifndef的作用
+
+一般地，假如有一个C源文件（如sourcefile.cpp），它包含两个头文件（如headfile_1.h和headfile_2.h），而头文件headfile_2.h又包含了headfile_1.h，则最终的效果是该源文件包含了两次headfile_1.h。
+如果你在头文件里定义了结构体或者类类型，那么问题来了，编译时将会报重复定义的错误。
+
+(''')
+#ifndef CIRCLE_H
+#define CIRCLE_H
+
+//你的代码
+
+#endif
+(''')
